@@ -1,0 +1,12 @@
+[Unit]
+Description=apictl: The Datacol Api server
+Documentation=http://datacol.io/docs/
+
+[Service]
+ExecStart=/opt/datacol/apictl -log-file /opt/datacol/logs.txt
+Restart=always
+StartLimitInterval=0
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
